@@ -1,0 +1,47 @@
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+		<script src="socket.io/socket.io.js"></script>
+		<script src="script.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<title>
+			YikYaker
+		</title>
+	</head>
+
+	<body>
+		<div id="header">
+			YikYaker
+		</div>
+		
+		<div id="main">
+			<div id="sort">
+				<a onclick="sortByTime()" class="select">Most Recent</a>
+					<span id="spacer"></span>
+				<a onclick="sortByScore()" class="select">Highest Rank</a>
+			</div>
+			
+			<div id="error">
+				<br>
+			</div>
+			
+			<textarea rows="5" columns="30" id="messg" onfocus="clearForm()" onBlur="resetForm()">
+				Type a 200 letter message here...
+			</textarea>
+			<br>
+				<a class="btn" type="button" onclick="inputForm()" >Post</a>
+			<br>
+			<br>
+			
+			<div id="messages">
+			</div>
+		</div>
+
+		<div id="footer" onclick="loadMore()">
+			Load More Posts
+		</div>
+	</body>
+</html>
