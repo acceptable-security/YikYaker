@@ -7,7 +7,7 @@ var app = require('http').createServer(handler)
 
 io.set('close timeout', 300);  io.set('heartbeat timeout', 60);  
 io.set('heartbeat interval', 120); 
-io.set('transports', ['websocket', 'flashsocket', 'xhr-polling', 'htmlfile', 'jsonp-polling']); 
+io.set('transports', ['websocket', 'flashsocket', 'xhr-polling', 'htmlfile', 'polling']); 
 
 mongo.connect( 'mongodb://127.0.0.1:27017/beta1', function (db) {
 		console.log("Connected to Mongo...");
